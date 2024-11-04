@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class ex7 : MonoBehaviour
@@ -14,9 +15,8 @@ public class ex7 : MonoBehaviour
         print("O resultado da rolagem foi " + result + "!");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
