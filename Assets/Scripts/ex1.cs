@@ -5,7 +5,7 @@ using UnityEngine;
 public class ex1 : MonoBehaviour {
 
     [SerializeField] float VidaInicial = 1f;
-    [SerializeField] float VidaAtual;
+    public float VidaAtual;
     ex2 powerup;
 
     // Start is called before the first frame update
