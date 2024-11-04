@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class ex1 : MonoBehaviour {
 
-    [SerializeField] float Vida = 1;
-   
+    [SerializeField] float Vida = 1f;
+    ex2 powerup;
 
     // Start is called before the first frame update
     void Start() {
 
-        string alivecheck = Vida > 0 ? "O jogador está vivo." : "O jogador está morto.";
+        powerup = GameObject.FindGameObjectWithTag("Vida").GetComponent<ex2>();
 
-        print(alivecheck);
+        
+        if (Vida > 0) {
+            print("O jogador está vivo!");
+        }
+
+        else if (Vida <= 0) {
+            if (powerup.PowerUP) {
+                Vida = 10.0f;
+                print("Não! Você foi abençoado pelo Power UP!");
+            }
+        }
 
     }
 
