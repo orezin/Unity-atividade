@@ -5,13 +5,11 @@ using UnityEngine;
 public class ex1 : MonoBehaviour {
 
     [SerializeField] float VidaInicial = 1f;
-    float VidaAtual;
+    [SerializeField] float VidaAtual;
     ex2 powerup;
 
     // Start is called before the first frame update
     void Start() {
-
-        VidaAtual = VidaInicial;
 
         powerup = GameObject.FindGameObjectWithTag("Vida").GetComponent<ex2>();
 
