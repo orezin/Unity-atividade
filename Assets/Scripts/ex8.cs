@@ -7,7 +7,7 @@ public class ex8 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
@@ -19,12 +19,12 @@ public class ex8 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (frames <= 120)
+        if (frames <= 60)
         {
             frames += 1;
         }
 
-        if (frames == 120)
+        if (frames == 60)
         {
             frames = 0;
             segundos += 1;
