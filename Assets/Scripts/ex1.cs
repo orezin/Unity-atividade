@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class ex1 : MonoBehaviour {
 
-    [SerializeField] float Vida = 1f;
+    [SerializeField] float VidaInicial = 1f;
+    float VidaAtual;
     ex2 powerup;
 
     // Start is called before the first frame update
     void Start() {
 
+        VidaAtual = VidaInicial;
+
         powerup = GameObject.FindGameObjectWithTag("Vida").GetComponent<ex2>();
 
-        
-        if (Vida > 0) {
+        if (VidaAtual > 0) {
             print("O jogador está vivo!");
         }
 
-        else if (Vida <= 0) {
+        else if (VidaAtual <= 0) {
             if (powerup.PowerUP) {
-                Vida = 10.0f;
+                VidaAtual = VidaInicial / 2;
                 print("Não! Você foi abençoado pelo Power UP!");
             }
         }
