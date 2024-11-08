@@ -21,16 +21,19 @@ public class ex9 : MonoBehaviour
             print("O time B foi o vencedor!");
         }
 
-        else if (A == B && A + B < 6) {
-            print("Houve um empate entre os times!");
-
-        }
-
-        else if (A == B && A + B >= 6)
+        else
         {
-            print("Houve um empate EMOCIONANTE entre os times!");
-        }
+            if (B > 3 && A > 3)
+            {
+                print("Foi um EMPATE emocionante!");
+            }
 
+            else
+            {
+                print("Foi um empate!");
+            }
+            
+        }
 
     }
 

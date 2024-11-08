@@ -19,6 +19,7 @@ public class ex8 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (frames <= 60)
         {
             frames += 1;
@@ -27,7 +28,7 @@ public class ex8 : MonoBehaviour
         if (frames == 60)
         {
             frames = 0;
-            segundos += 1;
+            segundos++;
             print(dias + " dia(s)," + horas + "hora(s)" + segundos + "segundo(s)");
         }
 
@@ -35,13 +36,13 @@ public class ex8 : MonoBehaviour
         if (segundos == 10 && horas < 24)
         {
             segundos = 0;
-            horas += 1;
+            horas++;
         }
 
         if (horas == 24)
         {
             horas = 0;
-            dias += 1;
+            dias++;
         }
     }
 }
