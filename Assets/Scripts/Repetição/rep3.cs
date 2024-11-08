@@ -19,14 +19,15 @@ public class rep3 : MonoBehaviour
 
         int moedas = mc.moedas;
 
-        for (int i = 10; i > 0; i--)
+        for (int i = 1; i <= 10; i++)
         {
 
             print("Fase " + i + "! +3 moedas!");
+            moedas += 3;
 
         }
 
-        print(moedas + "moedas no total!");
+        print(moedas + " moedas no total!");
     }
 
     // Update is called once per frame
